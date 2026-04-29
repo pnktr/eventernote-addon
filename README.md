@@ -4,11 +4,11 @@
 
 ## スクリプト一覧
 
-### 演者別参加イベント一覧 ([actor-join-list.user.js](actor-join-list.user.js))
+### 演者別参加イベント一覧 ([actor-join-list.user.js](scripts/actor-join-list.user.js))
 
 演者ページ (`/actors/*`) を開いたとき、**その演者が出演している自分の参加イベント**を年度範囲で一覧表示します。
 
-### 会場別参加イベント一覧 ([place-join-list.user.js](place-join-list.user.js))
+### 会場別参加イベント一覧 ([place-join-list.user.js](scripts/place-join-list.user.js))
 
 会場ページ (`/places/*`) を開いたとき、**その会場で開催された自分の参加イベント**を年度範囲で一覧表示します。
 
@@ -47,6 +47,38 @@ https://www.eventernote.com/users/icalendar
 
 例: `https://www.eventernote.com/users/12345/icalendar` → `numericId = 12345`
 
+## カスタマイズ
+
+スクリプトを直接編集することで以下の項目を変更できます。
+
+**開始年のデフォルト値**（35行目）
+
+```js
+value="2009"
+```
+
+作者の最古の参加イベントが2009年のためこの値にしていますが、自分の参加歴に合わせて変更すると検索が速くなります。
+
+**パネルの幅**（23行目）
+
+```js
+width: 800px
+```
+
+画面サイズに合わせて調整してください。
+
+**結果一覧の最大高さ**（42行目）
+
+```js
+max-height: 1000px
+```
+
+結果が多い場合にスクロールが発生する高さです。画面サイズに合わせて調整してください。
+
 ## 使い方
 
 設定後、対象ページを開くと画面右上に検索パネルが表示されます。開始年・終了年を指定して「検索」ボタンを押すと、条件に一致する参加イベントが一覧で表示されます。
+
+![検索パネル](images/sample1.png)
+
+![検索結果](images/sample2.png)
