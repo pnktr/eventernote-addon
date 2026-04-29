@@ -10,8 +10,8 @@
 
 (function () {
     // 自分のIDに変えてね
-    const userId = 'pinokotere';
-    const numericId = 61711;
+    const userId = 'YOUR_USER_ID';  // eventernoteのユーザー名
+    const numericId = 0;            // 数字のID https://www.eventernote.com/users/icalendar から確認できる
 
     const sleep = ms => new Promise(r => setTimeout(r, ms));
 
